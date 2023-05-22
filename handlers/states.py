@@ -154,7 +154,7 @@ async def random_sending(item: types.Message):
     if ID == item.from_user.id:
         read = await sqlite_db.sql_read_as_list()
         if len(read) == 0:
-            await bot.send_message(item.from_user.id, text='lel')
+            await bot.send_message(item.from_user.id, text='upload something firstly')
         else:
             await auto_comment(item.from_user.id, read)
     else:
